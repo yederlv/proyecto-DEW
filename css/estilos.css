@@ -1,0 +1,594 @@
+@charset "UTF-8";
+
+/*-----------------CSS Document---------------*/
+* {
+    margin: 0;
+    border: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*------------------MENU------------------*/
+.logo {
+    width: 150px;
+  }
+  .img-menu {
+    width: 35px;
+    background: #bf1723;
+    border-radius: 5px;
+  }
+  body {
+    margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  header {
+    width: 100%;
+    background: #F5F3F2;
+  }
+  #botonmenu {
+    display: none;
+  }
+  header label {
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 10px;
+  }
+  header label:hover {
+    cursor: pointer;
+    background: rgba (0, 0, 0, 3);
+  }
+  #botonmenu:checked ~ .menu {
+    margin: 0;
+  }
+  .menu {
+    position: absolute;
+    background: #bf1723;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 1s;
+  }
+  .menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu li {
+    border-top: 1px solid white;
+  }
+  .menu li:hover {
+    background: #1d1d1b;
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+/*---------------BANNER-------------*/
+section{
+  width: 100%;
+}
+#banner{
+  margin-top: auto;
+}
+#banner img{
+  width: 100%;
+  height: 510px;
+  background-size: cover;
+  position: relative;
+}
+#mensaje{
+  text-align: center;
+}
+#imgbanner::before{
+  content: "";
+  width: 100%;
+  height: 510px;
+  background-color: #1d1d1b;
+  position: absolute;
+}
+
+/*--------------CATEGORÍAS----------------*/
+/*Ultimas historias(index)*/
+#historias-petlove{
+    background-color: #bf1723;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+  #historias-petlove table tr td h2{
+    color: white;
+  }
+  #historias-petlove a{
+    color: white;
+  }
+  #historias-petlove img{
+  border-style: dotted;
+  }
+ /*conoce el match*/ 
+  #tabla-petlove{
+    padding-bottom:20px;
+    width: 100%;  
+    /*background-color: white;*/
+   /* background-image: url("../imagenes/nosotros/cora.jpg");
+    background-size:cover;
+    background-position: center;*/
+  }
+    #tabla-petlove2{
+    width: 100%;  
+    background-color: white;
+    padding-bottom: 20px;
+  }
+  
+  section table tr td img{
+      width: 80%;
+      border: 4px inset rgb(207, 199, 199);
+      border-radius:14px;
+      
+  }
+  
+  section table tr td{
+    text-align: center;
+    width: 400px;
+  }
+  #tabla-petlove td {
+    position: relative;
+    top: 0;
+    
+  }
+  #tabla-petlove .letra{
+    position: absolute;
+    top: 4px;
+    width: 100px;
+	  height: 341px;
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: 1px;
+    margin-left: 40px;
+    
+    border: 4px solid yellow;
+    font-size: 40px;
+    padding-right: 210px;
+    background-color: rgb(119, 119, 119,0.6);
+    
+
+  }
+  #tabla-petlove td img{
+    width: 320px;
+    border: 4px inset rgb(207, 199, 199);
+    border-radius:14px;
+    height:340px;
+    
+    
+}
+  
+  
+  section a{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .mas {
+    margin-top: 40px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  
+  /*---------PASOS---------*/
+  section table tr td img.pasos-img{
+      width: 40%;
+      border: 4px solid rgb(168, 141, 141);
+      border-radius: 10px;
+  }
+  
+  /*-------------Categoría-------------------*/
+  /* ~ selector */
+  /*Cat - Perro*/
+  #p-macho:checked ~ #img-perro .p-hembra{
+    display: none;
+  }
+  #p-hembra:checked ~ #img-perro .p-macho{
+    display: none;
+  }
+  .p-macho, .p-hembra{  
+    width: 250px;    
+    margin-block:10px;
+  }
+  .p-hembra:hover{
+    background-color: #bf1723;
+  }
+  .p-macho:hover{
+    background-color: #bf1723;
+  }
+  
+  /*Cat-gatos*/
+  #g-macho:checked ~ #img-gato .g-hembra{
+    display: none;
+  }
+  #g-hembra:checked ~ #img-gato .g-macho{
+    display: none;
+  }
+  .g-macho, .g-hembra{  
+    width: 250px;    
+    margin-block: 10px;
+  }
+  .g-hembra:hover{
+    background-color: #bf1723;
+  }
+  .g-macho:hover{
+    background-color: #bf1723;
+  }
+  
+  /*Cat - otros*/
+  #o-macho:checked ~ #img-otro .o-hembra{
+    display: none;
+  }
+  #o-hembra:checked ~ #img-otro .o-macho{
+    display: none;
+  }
+  .o-macho, .o-hembra{  
+    width: 250px;    
+    margin-block: 10px;
+  }
+  .o-macho:hover{
+    background-color: #bf1723;
+  }
+  .o-hembra:hover{
+    background-color: #bf1723;
+  }
+  
+  h2{
+    color: #bf1723;  
+    margin-left: 35px;
+    margin-block: 30px;
+  }
+
+
+  /*--------------SECTION-TABLA DE CATEGORIAS---------*/
+main section h1 {
+    font-size: 40px;
+}
+main section h2 {
+    font-size: 30px;
+}
+section {
+    width: 100%;
+}
+.categoria {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+}
+.categoria li {
+    margin: 5px;
+}
+.categoria img { 
+    width: 350px; height: 250px;
+    border-bottom: white;
+    border-radius: 40px;
+}
+.categoria img:hover {
+    filter: opacity(.5);
+}  /*---Le da un efecto opaco al pasar el mouse. */
+
+/*--------------GALERIA DE FOTOS------------- */
+/*---------Estilos del Modelo para la Galería-----------*/
+.galeriatotal
+{
+    margin: auto;
+    background-color: white;
+    width: 800px;
+    padding: 30px;
+}
+  
+.galeriatotal ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+  
+.galeria{
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+ul.galeria li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}  
+ul.galeria li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+ul.galeria li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+  
+ul.galeria li:target {
+      opacity: 1; /*Mostramos el <li> de la imagen que pulsemos*/
+}
+  
+.galeriadetalle{
+    text-align: center;
+    margin: 20px;
+}
+.galeriadetalle li{
+    display: inline-block;
+    text-align: center;
+}
+.galeriadetalle li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+/*Diseño cupido y nosotros*/
+
+.nosotros{
+  background-color: chocolate;
+  display: flex;
+}
+.resultados{
+
+  padding-bottom: 200px;
+}
+#main h4{
+  font-size: 50px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.resultado-div{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40%;
+  margin-left: 30%;
+ 
+}
+.resultado-div .cuadro{
+  border: 1px lightblue solid;
+  width: 200px;
+  height: 120px;
+  margin: 10px;
+}
+.nosotros-div{
+  background-color: blueviolet;
+  display: flex;
+}
+.historia{
+  background-color: burlywood;
+}
+.misionvision{
+  background-color: chartreuse;
+}
+.cuadro h3 ,.cuadro p{
+  font-size: 25px;
+  padding-top: 3px;
+  
+}
+.cuadro img{
+  width: 200px;
+  height: 120px;
+
+}
+
+/*.mayor>h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.resultados>h3{
+    text-align: center;
+    color:darkred;
+}
+#segundo{
+    display:flex;
+    border: 1px yellow solid;
+}
+p.mision{
+    border: 2px solid darkred;
+}
+p.vision{
+    border: 2px solid darkred;
+}
+img.patitas{
+    width: 6%;margin: 0% 0% 0% 4%
+}
+.nosotros{
+    display: flex;
+    border: 1px blue solid;
+    background-color: brown;
+    
+}
+
+.resultados{
+    border: 1px blue solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    
+}
+div.historia{
+    display: block;
+}
+div.misionvision{
+    position: relative;
+}
+.misionvision{
+    margin: 1% 5% 0% 5% ;
+}
+.vision{
+    margin-top: 6%;
+}
+.mayor{
+    width: 100%; 
+    display:block;
+}
+
+.mayor>h4{
+    margin: 2% 0% 2% 2%;
+    font-size: 50px;
+    font-family: "Lobster",cursive;
+}
+
+.dato1{
+     
+    font-size:110%; 
+    text-align: center;
+}
+.cuadro{
+  border: 1px pink solid;
+  background-color: blue;
+  display: block;
+}*/
+
+
+/*HISTORIAS***********************************************************/
+
+#contenedor{
+    width: 100%;
+}
+.h2{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 4%;
+    color: darkred;
+}
+#articlehistorias{
+    display: block;
+}
+#mainhistorias{
+    margin: 0% 0% 0% 0%;
+}
+.historia1{
+    margin:2% 10% 0% 11%; 
+    font-size:110%; 
+    text-align: justify;
+    width: 90%;
+}
+.historia2{
+    margin:2% 0% 0% 33%; 
+    font-size:110%; 
+    text-align: justify;
+    width: 75%;
+}
+.historia3{
+    margin:2% 0% 0% 62%; 
+    font-size:110%;
+    text-align: justify;
+    width: 90%;
+}
+.imagen1{
+    margin: 10% 0% 0% 0%; 
+    width: 75%; 
+    border-radius: 10px;
+}
+.imagen2{
+    margin: 7% 0% 0% 35%; 
+    width: 80%; 
+    border-radius: 10px;
+}
+.imagen3{
+    margin: 9% 0% 0% 63%; 
+    width: 87%; 
+    border-radius: 10px;
+
+/*------iniciar sesion-------*/
+}
+#imgheader{
+width: 100%;
+
+}
+section{
+  text-align: center;
+}
+/*------------FOOTER-----------*/
+.redes img{
+  width: 30px;
+  height: 25px;
+  border-radius: 4px;
+  padding-right: 8px;
+ 
+}
+footer{
+  background-color: rgba(12, 11, 11, 1);
+  padding-bottom: 30px;
+  text-decoration-color: rgb(105, 105, 104);
+  text-align: justify;
+  width: 100%;
+}
+.loga {
+  width: 250px;
+  height: auto;
+  margin-top: 40px;
+}
+footer h3{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(177, 177, 177) ;
+}
+.mapa{
+  padding-bottom: 8px;
+
+}
+.mapa li{
+  font-size: 18px;
+  padding-bottom: 8px;
+  font-weight: 200;
+  color: rgb(177, 177, 177);
+}
+.mapa h2{
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration-line:underline;
+  color: rgb(133, 133, 133);
+
+}
+.final{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.redes li{
+  display: block;
+  
+}
+.redes li a{
+  text-decoration: none;
+  color:rgb(177, 177, 177);
+  
+}
+hr{
+  height: 1px;
+  background-color: black;
+}
+@media (max-width: 674px){
+  .final{
+    width: 60%;
+    display: inline-block;
+  }
+}
+
